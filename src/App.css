@@ -1,0 +1,138 @@
+/* Ensure the html and body elements take full height */
+html {
+  height: 100%; /* Full height for both html and body */
+  margin: 0; /* Remove default margin */
+  background: linear-gradient(to top left, rgba(18, 0, 26, 1), rgba(81, 37, 87, 1)); /* Gradient background */
+  overflow: hidden; /* Prevent horizontal scrolling */
+}
+
+body {
+  height: 100%; /* Full height for both html and body */
+  margin: 0; /* Remove default margin */
+  background: linear-gradient(to top left, rgba(18, 0, 26, 1), rgba(81, 37, 87, 1)); /* Gradient background */
+  overflow: auto; /* Prevent horizontal scrolling */
+}
+
+.election-chooser {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 18vh;
+  font-family: 'Arial', sans-serif;
+}
+
+.election-chooser h2 {
+  font-size: 2rem;
+  color: #333;
+}
+
+.button-bar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.election-button {
+  font-size: 1.8rem;
+  width: 230px;  /* Adjust width to make the buttons large */
+  height: 80px;  /* Adjust height to match the header's visual style */
+  color: #ffffff;
+  cursor: pointer;
+  border: 0.5px solid #000000;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+  font-weight: bold;
+  text-align: center;
+}
+
+.election-button:hover {
+  border: 2px solid #ffffff;
+  transform: scale(1.05); /* Slightly enlarge on hover for a nice effect */
+}
+
+.election-button.selected {
+  color: white;
+  border: 2px solid #ffffff;
+}
+
+.election-button:focus {
+  outline: none;
+  border: 2px solid #ffffff;
+}
+
+.election-button[data-year="2008"] {
+  background-color: rgba(34, 52, 168, 0.5); 
+}
+
+.election-button[data-year="2012"] {
+  background-color: rgba(34, 52, 168, 0.5);
+}
+
+.election-button[data-year="2016"] {
+  background-color: rgba(162, 51, 51, 0.5); 
+}
+
+.election-button[data-year="2020"] {
+  background-color: rgba(34, 52, 168, 0.5);  
+}
+
+.election-button[data-year="2024"] {
+  background-color: rgba(162, 51, 51, 0.5); 
+}
+
+/* Ensure the app container stretches to fill at least the full height of the viewport */
+.app-container {
+  min-height: 100vh; /* Ensures it takes at least the full height */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 0;
+  padding: 120px;
+  overflow-y: auto; /* Allow vertical scrolling */
+}
+
+Map {
+  width: 100%;
+  height: 24rem; /* Adjust height to your preference */
+}
+
+/* Header styling */
+.app-header {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #FFF; /* White text */
+}
+
+main {
+  width: 90%;
+  max-width: 1200px; /* Allows content to scale for larger screens */
+  margin: 0 auto;
+  padding: 10px; /* Optional padding for visual space */
+}
+
+@media (min-width: 1200px) {
+  main {
+      max-width: 90%; /* For very large screens */
+  }
+}
+
+main:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 5px;
+}
+
+
+/* General typography */
+h1, p {
+  color: #FFF; /* White text */
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Padding around the content */
+p {
+  margin-top: 10px;
+  font-size: 1.2rem;
+}
